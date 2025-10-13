@@ -1,0 +1,14 @@
+name: customized_action_mc
+# Path for personalized motion data - set CUSTOMIZED_ACTION_PATH environment variable to override
+path: ${oc.env:CUSTOMIZED_ACTION_PATH,${oc.env:HOME}/datasets/CustomizedActionMC/mocapade}
+# Set MODEL_REGISTRY_PATH environment variable to override
+model_reg_path: ${oc.env:MODEL_REGISTRY_PATH,${oc.env:HOME}/model-registry}
+  
+framerate: 30
+seq_len: 16
+batch_size: 16
+num_workers: 1
+train_test_split: 0.99
+sampler: none
+
+

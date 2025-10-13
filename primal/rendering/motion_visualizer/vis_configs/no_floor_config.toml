@@ -1,0 +1,7 @@
+[core]
+auto_add_floor = false
+
+log_level = "off"
+
+[scene.cam]
+fovy = 0.7 #radians

@@ -1,0 +1,134 @@
+# =============================================================================
+# Python
+# =============================================================================
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# =============================================================================
+# Virtual Environments & Package Managers
+# =============================================================================
+.venv/
+venv/
+env/
+ENV/
+poetry.lock
+pip-log.txt
+pip-delete-this-directory.txt
+
+# =============================================================================
+# IDE & Editor Files
+# =============================================================================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+*DS_Store*
+Thumbs.db
+
+# =============================================================================
+# Security & Authentication
+# =============================================================================
+.gitlab_token
+.env
+.env.local
+.env.*.local
+*.key
+*.pem
+*.p12
+*.pfx
+credentials.json
+secrets.json
+
+# =============================================================================
+# Machine Learning & Research
+# =============================================================================
+# Model checkpoints and weights
+*.pt
+*.pth
+*.ckpt
+*.h5
+*.hdf5
+*.model
+*.pkl
+*.pickle
+*.joblib
+
+# Data files
+*.smpl
+*.npy
+*.npz
+*.csv
+*.tsv
+*.json
+!**/configs/**/*.json
+!**/config.json
+
+# Experiment outputs
+logs/
+outputs/
+**outputs**/
+runs/
+wandb/
+mlruns/
+.tensorboard/
+tensorboard_logs/
+
+# =============================================================================
+# Application-Specific
+# =============================================================================
+# Legacy directories to ignore
+ivatar/
+# Gradio
+.gradio/
+flagged/
+
+# Training & evaluation logs
+train.log
+predict.log
+eval.log
+*.log
+!**/logs/*.py
+
+# Temporary and cache files
+*.tmp
+*.temp
+.cache/
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+
+# =============================================================================
+# System Files
+# =============================================================================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+

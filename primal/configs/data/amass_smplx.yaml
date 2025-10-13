@@ -1,0 +1,30 @@
+name: amass_smplx
+# Paths can be set via environment variables or use defaults
+# Set AMASS_DATA_PATH environment variable to override
+path: ${oc.env:AMASS_DATA_PATH,${oc.env:HOME}/datasets/AMASS/AMASS_SMPLX_NEUTRAL_YUP_wjts_ground}
+# Set MODEL_REGISTRY_PATH environment variable to override  
+model_reg_path: ${oc.env:MODEL_REGISTRY_PATH,${oc.env:HOME}/model-registry}
+subsets:
+    # - HumanEva
+    - ACCAD
+    - BMLmovi
+    - BMLrub
+    - CMU
+    - DFaust
+    - Eyes_Japan_Dataset
+    - HDM05
+    - PosePrior
+    - SOMA
+    - MoSh
+    - SSM
+  
+read_all_files_to_ram: true
+framerate: 30
+seq_len: 16
+batch_size: 256
+num_workers: 1
+train_test_split: 0.95
+shape_noise_sigma: 1.0
+reverse_time_dimension: false
+
+

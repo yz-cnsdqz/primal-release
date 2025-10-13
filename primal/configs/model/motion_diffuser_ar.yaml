@@ -1,0 +1,51 @@
+_target_: primal.models.motion_diffuser.ARDiffusion
+cfg:
+  network: 
+    # common configs
+    type: transformerInContext
+    h_dim: 256
+    # only for transformer
+    n_layer: 10
+    n_head: 8
+    dropout: 0.1
+    use_positional_encoding: true
+    # only for transformerInContext
+    separate_condition_token: false
+    act_fun: silu
+
+    
+  scheduler:
+    type: ddpm
+    beta_schedule: squaredcos_cap_v2
+    prediction_type: sample
+    num_train_timesteps: 50
+
+  # motion representation
+  canonical_tidx: start
+  canonical_on_ground: false
+  motion_repr: smplx_jts_locs_velocity_rotcont
+  use_metric_velocity: false
+  
+  
+  # loss and training
+  use_l1_norm_fk: false
+  use_l1_norm_vel: false
+  weight_simple: 1
+  weight_fk: 1
+  weight_vel: 1
+  ema_decay: 0.999
+  ema_start_epoch_ratio: 0.05
+
+  lr: 1e-4
+  lr_decay_rate: 1
+  lr_warmup_steps: 0
+  max_epochs: ${trainer.max_epochs}
+
+  # data
+  data: ${...data}
+
+
+  # scheduled sampling
+  use_ss: false
+  ss_start_epoch: 2000
+  ss_end_epoch: 4000

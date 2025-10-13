@@ -1,0 +1,9 @@
+[core]
+auto_add_floor = false
+log_level = "off"
+
+[render]
+bg_color = [0.05, 0.05, 0.05, 0.0]
+
+[scene.cam]
+fovy = 0.7 #radians

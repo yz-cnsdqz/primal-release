@@ -1,0 +1,10 @@
+defaults:
+  - _self_
+  - data: amass_smplx
+  - model: motion_diffuser_ar
+  - logger: tensorboard
+  - trainer: default_gpu
+  - hydra: default
+
+log_dir: logs
+task_name: motion_diffuser_ar
