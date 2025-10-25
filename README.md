@@ -81,6 +81,11 @@ The pre-trained checkpoints can be downloaded [here](https://drive.google.com/dr
 
 
 
+### 0.5 Setup AMASS
+The AMASS dataset can be downloaded [here](https://amass.is.tue.mpg.de).
+The motion in the raw AMASS dataset is Z-up, whereas PRIMAL uses the Y-up world coordinate. One can use `primal/utils/cvt_amass_to_yup.py` to perform the conversion. Afterwards, its path can be set in `.env.example ` (see Sec. 0.2).
+
+
 ## 1. Inference With Gradio Demos
 We leverage [gradio](https://www.gradio.app) to show how our methods work. 
 
